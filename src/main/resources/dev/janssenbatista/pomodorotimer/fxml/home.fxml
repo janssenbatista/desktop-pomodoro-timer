@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" spacing="16.0" styleClass="container"
+      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="dev.janssenbatista.pomodorotimer.controllers.HomeController">
+    <MenuBar prefWidth="600">
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem fx:id="menuItemClose" mnemonicParsing="false" style="-fx-margin: 0" text="Close"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem fx:id="menuItemSettings" mnemonicParsing="false" text="Settings"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" text="About"/>
+        </Menu>
+    </MenuBar>
+    <HBox alignment="CENTER">
+        <Label fx:id="labelCurrentTimer" styleClass="timer-label" text="Work Time">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <ProgressIndicator fx:id="progressIndicator" prefHeight="30.0" prefWidth="30.0" visible="false">
+            <HBox.margin>
+                <Insets left="16.0"/>
+            </HBox.margin>
+        </ProgressIndicator>
+    </HBox>
+
+    <Label fx:id="labelTimer" style="-fx-font-size: 128;" styleClass="timer-label" text="00:00">
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
+    </Label>
+    <StackPane prefWidth="200.0">
+        <Button fx:id="buttonSkip" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="primary-button"
+                text="Skip Time"/>
+        <Button fx:id="buttonStart" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" styleClass="primary-button"
+                text="Start">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Button>
+    </StackPane>
+    <HBox alignment="TOP_CENTER" spacing="16.0">
+        <VBox.margin>
+            <Insets bottom="16.0"/>
+        </VBox.margin>
+        <Button fx:id="buttonPause" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0"
+                styleClass="secondary-button" text="Pause">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Button>
+        <Button fx:id="buttonReset" mnemonicParsing="false" prefHeight="35.0" prefWidth="160.0"
+                styleClass="secondary-button" text="Reset">
+            <font>
+                <Font name="System Bold" size="16.0"/>
+            </font>
+        </Button>
+    </HBox>
+</VBox>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" spacing="10.0" styleClass="vbox-about" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.janssenbatista.pomodorotimer.controllers.AboutController">
+    <padding>
+        <Insets bottom="32.0" left="16.0" right="16.0" top="32.0" />
+    </padding>
+    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/app_icon.png" />
+        </image>
+    </ImageView>
+    <VBox alignment="TOP_CENTER">
+        <Label styleClass="label-about" text="Pomodoro Timer">
+            <font>
+                <Font name="System Bold Italic" size="32.0" />
+            </font>
+        </Label>
+        <Label styleClass="label-about" text="1.0.0" />
+        <Label styleClass="label-about" text="A simple time management utility" />
+    </VBox>
+    <HBox alignment="CENTER">
+        <Label styleClass="label-about" text="Created by:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Hyperlink fx:id="hyperLinkOwner" text="Janssen Batista (batistajanssen.dev@gmail.com)">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Hyperlink>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="26.0" layoutY="202.0">
+        <Label styleClass="label-about" text="Repository:">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Hyperlink fx:id="hyperLinkGithub" text="Github">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Hyperlink>
+    </HBox>
+    <HBox alignment="CENTER" layoutX="26.0" layoutY="268.0">
+        <Label styleClass="label-about" text="App Icons By: ">
+           <font>
+               <Font name="System Bold" size="14.0"/>
+           </font>
+        </Label>
+        <Hyperlink fx:id="hyperLinkAppIcons" text="SVGRepo">
+           <font>
+               <Font size="14.0"/>
+           </font>
+        </Hyperlink>
+    </HBox>
+</VBox>

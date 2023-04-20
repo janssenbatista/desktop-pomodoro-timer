@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="220.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.janssenbatista.pomodorotimer.controllers.SettingsController">
+    <SplitPane dividerPositions="0.65">
+        <VBox spacing="5.0">
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </padding>
+            <HBox prefWidth="200.0">
+                <Label styleClass="settings-label" text="Work Time: " />
+                <Label fx:id="labelWorkTime" styleClass="settings-label" text="25" />
+            </HBox>
+            <Slider fx:id="sliderWorkTime" blockIncrement="1.0" max="50.0" min="20.0" minorTickCount="5" value="25.0" />
+            <HBox prefWidth="200.0">
+                <Label styleClass="settings-label" text="Short Break Time: " />
+                <Label fx:id="labelShortBreakTime" styleClass="settings-label" text="5" />
+            </HBox>
+            <Slider fx:id="sliderShortBreakTime" blockIncrement="1.0" max="15.0" min="2.0" value="5.0" />
+            <HBox prefWidth="200.0">
+                <Label styleClass="settings-label" text="Long Break Time: " />
+                <Label fx:id="labelLongBreakTime" styleClass="settings-label" text="15" />
+            </HBox>
+            <Slider fx:id="sliderLongBreakTime" max="25.0" min="10.0" value="15.0" />
+        </VBox>
+        <VBox prefWidth="100.0" spacing="10.0">
+            <padding>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </padding>
+            <Label styleClass="settings-label" text="Theme" />
+            <ComboBox fx:id="comboBoxTheme" prefWidth="150.0" />
+            <Label styleClass="settings-label" text="Alert Sound" />
+            <HBox alignment="CENTER_LEFT" spacing="5.0">
+                <ComboBox fx:id="comboBoxSound" prefWidth="150.0" />
+                <ImageView fx:id="imageViewPlay" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" styleClass="play-image">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+            </HBox>
+        </VBox>
+        <padding>
+            <Insets top="20.0" />
+        </padding>
+    </SplitPane>
+    <HBox alignment="CENTER_RIGHT" spacing="10.0" styleClass="hbox-settings">
+        <padding>
+            <Insets bottom="20.0" left="10.0" right="10.0" top="20.0" />
+        </padding>
+        <Button fx:id="buttonCancel" prefHeight="35.0" prefWidth="150.0" styleClass="secondary-button" text="Cancel" />
+        <Button fx:id="buttonSaveSettings" prefHeight="35.0" prefWidth="150.0" styleClass="primary-button" text="Save Settings" />
+    </HBox>
+    <HBox />
+</VBox>
