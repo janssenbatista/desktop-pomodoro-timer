@@ -15,7 +15,7 @@ A simple time management utility
 ##### 1.  Requirements
 
 - [Java JDK](https://openjdk.org/)
-
+- [JavaFX](https://openjfx.io/)
 - [Gradle](https://gradle.org/)
 
 ##### 2. Build
