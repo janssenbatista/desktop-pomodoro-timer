@@ -168,6 +168,7 @@ class HomeController {
     private fun onSkip() {
         counter++
         currentTimer = getCurrentTimer(counter)
+        labelTimer.text = formatTime(currentTimer)
         startSkipAnimation()
     }
 
